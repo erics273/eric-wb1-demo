@@ -67,6 +67,18 @@ public class TheDemoApp {
         //increment by one but it will happen before the print line
         System.out.println( ++num1 );
 
+        //widening and narrowing
+
+        //widening is no big deal (byte to int)
+        byte someSmallByte = 50;
+        int someSmallInt = someSmallByte;
+        System.out.println(someSmallByte);
+
+        //narrowing issue
+        int someBigInt = 120;
+        byte someBigByte = (byte) someBigInt;
+        System.out.println(someBigByte);
+
 
     }
 
