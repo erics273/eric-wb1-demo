@@ -1,5 +1,10 @@
 package com.pluralsight;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TheDemoApp {
 
     public static void main(String[] args) {
@@ -11,7 +16,7 @@ public class TheDemoApp {
         int age = 45;
 
         //concating with the +
-        System.out.println( firstName + " " + lastName + " is awesome. He is " + age + " years old." );
+        System.out.println(firstName + " " + lastName + " is awesome. He is " + age + " years old.");
 
         //formatted string
         System.out.printf("My name is %s %s and he is %d years old\n", firstName, lastName, age);
@@ -51,7 +56,7 @@ public class TheDemoApp {
         System.out.println("The sum is " + sumWithDecimal);
 
         //addition with results as a decimal typcasted
-        int sumWithDecimalTypcasted =  (int) sumWithDecimal;
+        int sumWithDecimalTypcasted = (int) sumWithDecimal;
         System.out.println("The sum is " + sumWithDecimalTypcasted);
 
         //examples the wierdness with pre and post increment
@@ -59,13 +64,13 @@ public class TheDemoApp {
         System.out.println(num1 = num1 + 1);
 
         //explicitly increment by more than
-        System.out.println( num1 += 3 );
+        System.out.println(num1 += 3);
 
         //increment by one but it wont happen before the print line
-        System.out.println( num1++ );
+        System.out.println(num1++);
 
         //increment by one but it will happen before the print line
-        System.out.println( ++num1 );
+        System.out.println(++num1);
 
         //widening and narrowing
 
@@ -79,7 +84,56 @@ public class TheDemoApp {
         byte someBigByte = (byte) someBigInt;
         System.out.println(someBigByte);
 
+        //some small examples the Math class and its methods
+
+        //random gives you a randome number between 1 and 0
+        System.out.println(Math.random());
+
+        //OOOOOOO if statments
+
+        //50/50 chance of something
+        if (Math.random() < 0.5) {
+            System.out.println("50% chance I made it in the if");
+        }else{
+            System.out.println("50% chance I made it in the else");
+        }
+
+        //flip a coin
+        if ( flipThatCoin() ) {
+            System.out.println("heads");
+        }else{
+            System.out.println("tails");
+        }
+
+
+        //flip a coin
+        if ( flipThatCoin() ) {
+            System.out.println("poop");
+        }else{
+            System.out.println("dorito");
+        }
+
+
 
     }
+
+    //kimball wants a cooler way to flip a coin so here is a coin flip method
+    public static boolean flipThatCoin(){
+
+
+        //long way
+//        if (Math.random() < 0.5) {
+//            return true;
+//        }
+//
+//        return false;
+//
+
+
+        //short way
+        return Math.random() < 0.5;
+
+    }
+
 
 }
