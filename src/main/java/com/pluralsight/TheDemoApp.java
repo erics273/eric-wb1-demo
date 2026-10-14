@@ -54,6 +54,19 @@ public class TheDemoApp {
         int sumWithDecimalTypcasted =  (int) sumWithDecimal;
         System.out.println("The sum is " + sumWithDecimalTypcasted);
 
+        //examples the wierdness with pre and post increment
+        //explicitly increment by 1
+        System.out.println(num1 = num1 + 1);
+
+        //explicitly increment by more than
+        System.out.println( num1 += 3 );
+
+        //increment by one but it wont happen before the print line
+        System.out.println( num1++ );
+
+        //increment by one but it will happen before the print line
+        System.out.println( ++num1 );
+
 
     }
 
