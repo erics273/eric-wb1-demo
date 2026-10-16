@@ -66,6 +66,8 @@ public class AskingOurCodeQuestions {
         //comparing strings
         String string1 = "hello";
         String string2 = "hello";
+        //you probably wont use this (the constructor for String.
+        //Just here as an example because I knew it would break things
         String string3 = new String("hello");
 
         System.out.println("string 1: " + string1);
